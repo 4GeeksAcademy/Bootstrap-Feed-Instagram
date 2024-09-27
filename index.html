@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Link de estilado de Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!--Link de fuentes de iconos-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+        <title>Bootstrap Feed Instagram</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row bg-light py-3">
+                <div class="col-10">
+                    <h1><i class="fa-brands fa-instagram"></i>Instagram</h1>
+                </div>
+                <!--Modal-->
+                <div class="col-2">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create a new post</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">
+                                                <h6>Caption:</h6>
+                                            </label>
+                                                <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+                                        </div>
+                                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                                            <i class="fa-solid fa-camera"></i>
+                                        </button>
+                                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Dropdown-->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Toggle Grid -->
+        <div class="container-fluid p-2">
+            <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                        <i class="fa-solid fa-table-cells"></i>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        <i class="fa-solid fa-square"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+            <!--Grid con tres fotos por fila-->
+                <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://wallpaper.forfun.com/fetch/66/66f305c29ed70f53accbba5036c21aac.jpeg">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://live-production.wcms.abc-cdn.net.au/65acada9ee9ec82bdf6a1c78b7005e4f?impolicy=wcms_crop_resize&cropH=1160&cropW=1740&xPos=154&yPos=0&width=862&height=575">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://img.asmedia.epimg.net/resizer/v2/UN7EWUQBDJCKXFY347M7APJBRI.jpg?auth=9bbf5b605601f98a161d810fa4a40fe3f7761a39e82b96fa31147b7c2a837e7a&width=736&height=414&smart=true">
+                    </div>
+                    <div class="row">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1674030135/blog/bnbtltnp5nqbdevfcbmn.webp">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://bettarea.es/wp-content/uploads/2022/02/betta-hm-spred-1.jpg">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://img.remediosdigitales.com/0ce237/mazda-mx-5-na.-02/1366_2000.jpg">
+                    </div>
+                    <div class="row">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://wallpapers.com/images/high/colombia-street-aesthetic-shot-lznwnf00i3uafytz.webp">
+                        <img class="col-4 p-1" style="height: 30em; object-fit: cover;" src="https://codingweek.org/wp-content/uploads/2023/09/chris-ried-ieic5Tq8YMk-unsplash-scaled.jpg">
+                    </div>
+                </div>
+                <!--Grid de una foto por fila-->
+                <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row my-4">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex p-2">
+                                <div class="w-100 fs-4">Real Madrid C.F.</div>
+                            <small class="align-bottom">08/26</small>
+                            </div>
+                            <img style="object-fit: cover;" src="https://wallpaper.forfun.com/fetch/66/66f305c29ed70f53accbba5036c21aac.jpeg" class="img-fluid w-100 col-12" alt=""/>
+                            <div class="p-2">
+                                <strong>2,5M Likes</strong>
+                                <p>El mejor equipo del mundo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-4"></div>
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Drifting</div>
+                        <small class="align-bottom">04/09</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://live-production.wcms.abc-cdn.net.au/65acada9ee9ec82bdf6a1c78b7005e4f?impolicy=wcms_crop_resize&cropH=1160&cropW=1740&xPos=154&yPos=0&width=862&height=575" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>26985 Likes</strong>
+                            <p>Este es un ejemplo de lo que significa la palabra "adrenalina"</p>
+                        </div>
+                    </div>
+                    <div class="row my-4"></div>
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">The Legend Of Zelda: Tears Of The Kingdom</div>
+                            <small class="align-bottom">06/10</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://img.asmedia.epimg.net/resizer/v2/UN7EWUQBDJCKXFY347M7APJBRI.jpg?auth=9bbf5b605601f98a161d810fa4a40fe3f7761a39e82b96fa31147b7c2a837e7a&width=736&height=414&smart=true" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>34459 Likes</strong>
+                            <p>El videojuego más vendido de toda la saga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Funcionalidades de Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+</html>
